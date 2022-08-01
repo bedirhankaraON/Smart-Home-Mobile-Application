@@ -1,16 +1,83 @@
-# smartix
+# Smart Home
 
-A new Flutter project.
+Description : This is an open-souce flutter aplication which can communicate with your smart widgets. *Development purposes only*. 
 
-## Getting Started
+**Folder Structure**
 
-This project is a starting point for a Flutter application.
+```
+Smart-Home-Mobile-Application
+├─ lib
+│  ├─ core
+│  │  ├─ error
+│  │  │  ├─ exceptions
+│  │  ├─ params
+│  │  ├─ resources
+│  │  │  ├─ localization
+│  │  │  └─ theme
+│  │  ├─ routes
+│  │  ├─ usecase
+│  │  └─ util
+│  ├─ data
+│  │  ├─ datasources
+│  │  │  ├─ local
+│  │  │  │  └─ mocked_storage
+│  │  │  └─ remote
+│  │  ├─ models
+│  │  └─ repositories
+│  ├─ domain
+│  │  ├─ client
+│  │  │  └─ converters
+│  │  ├─ repositories
+│  │  └─ usecases
+│  ├─ main.dart
+│  └─ presentation
+│     ├─ blocs
+│     │  ├─ device
+│     │  ├─ routines
+│     │  └─ weather
+│     ├─ pages
+│     │  ├─ dashboard
+│     │  ├─ devices
+│     │  │  ├─ create_device
+│     │  │  ├─ device_detail
+│     │  ├─ error_screen
+│     │  ├─ menu
+│     │  └─ routines
+│     │     ├─ create_routines
+│     │     ├─ routines_detail
+│     └─ widgets
+│        ├─ common
+│        ├─ dashboard
+│        └─ routines
+└─ test
+   └─ weather
 
-A few resources to get you started if this is your first Flutter project:
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**State Management** : BLoC
+**Network Client** Chopper
+**Local Storage** Hive
+
+---
+**Services:**
+- Weather : ([openweathermap](https://openweathermap.org/api))
+- Mock Data Service from Local Storage (Devices and Routines)
+
+
+**Localizations:**
+Localizations not implemented but you can implement localizations easily according the example in localization folder. 
+
+**Tests:**
+- Weather Repository test
+
+**Installation:**
+-
+- `git clone https://github.com/bedirhankaraON/Smart-Home-Mobile-Application.git`
+- run `flutter pub get`
+- If API key expired, you can get a new API key from the ([openweathermap](https://openweathermap.org/api)) for free. You can add the new key to .env .
+- Then `flutter run`
+
+**For Tests:**
+- run `flutter test`
+
