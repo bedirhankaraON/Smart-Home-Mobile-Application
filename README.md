@@ -81,3 +81,11 @@ Localizations not implemented but you can implement localizations easily accordi
 **For Tests:**
 - run `flutter test`
 
+
+**Screenshots:**
+-
+
+|   ![enter image description here](https://raw.githubusercontent.com/bedirhankaraON/Smart-Home-Mobile-Application/main/assets/screenshots/1.png)|  ![enter image description here](https://raw.githubusercontent.com/bedirhankaraON/Smart-Home-Mobile-Application/main/assets/screenshots/2.png) | ![enter image description here](https://raw.githubusercontent.com/bedirhankaraON/Smart-Home-Mobile-Application/main/assets/screenshots/3.png)  |  ![enter image description here](https://raw.githubusercontent.com/bedirhankaraON/Smart-Home-Mobile-Application/main/assets/screenshots/4.png) |
+|---|---|---|---|
+|  ![enter image description here](https://raw.githubusercontent.com/bedirhankaraON/Smart-Home-Mobile-Application/main/assets/screenshots/5.png) |  ![enter image description here](https://raw.githubusercontent.com/bedirhankaraON/Smart-Home-Mobile-Application/main/assets/screenshots/6.png) |  ![enter image description here](https://raw.githubusercontent.com/bedirhankaraON/Smart-Home-Mobile-Application/main/assets/screenshots/7.png) |   |
+
