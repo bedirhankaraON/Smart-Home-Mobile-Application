@@ -4,8 +4,10 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smartix/core/resources/theme/colors.dart';
+import 'package:smartix/data/datasources/local/icon_parser.dart';
 import 'package:smartix/data/datasources/local/mocked_storage/devices.dart';
 import 'package:smartix/presentation/blocs/routines/routines_bloc.dart';
+import 'package:smartix/presentation/pages/dashboard/dashboard_screen.dart';
 import 'package:smartix/presentation/pages/routines/routines_detail/routines_detail_modal.dart';
 
 class RoutineWidget extends StatefulWidget {
@@ -16,7 +18,7 @@ class RoutineWidget extends StatefulWidget {
 }
 
 class _RoutineWidgetState extends State<RoutineWidget> {
-  final bloc = RoutinesBloc();
+  final bloc = dashboardRoutinesBloc;
   @override
   void initState() {
     super.initState();
@@ -51,16 +53,7 @@ class _RoutineWidgetState extends State<RoutineWidget> {
                         border: Border.all(color: ThemeColors.secondary),
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      child: Icon(
-                        IconData(
-                          device['deviceType']['icon'],
-                          fontFamily: device['deviceType']['fontFamily'],
-                          fontPackage:
-                              device['deviceType']['fontFamily'].contains('Cupertino') ? 'cupertino_icons' : null,
-                        ),
-                        size: device['deviceType']['iconSize'],
-                        color: ThemeColors.secondary,
-                      ),
+                      child: ParsedIcon.icon(device, color: ThemeColors.secondary, size: 35),
                     ),
                     title: Row(
                       children: <Widget>[
@@ -83,7 +76,7 @@ class _RoutineWidgetState extends State<RoutineWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:12),
+              padding: const EdgeInsets.only(top: 12),
               child: GestureDetector(
                 onTap: () => Navigator.pushNamed(context, 'createNewRoutine', arguments: bloc),
                 child: DottedBorder(

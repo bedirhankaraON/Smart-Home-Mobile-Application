@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartix/core/app_core.dart';
+import 'package:smartix/presentation/widgets/common/error_info_widget.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({Key? key}) : super(key: key);
@@ -48,13 +49,23 @@ class MenuScreen extends StatelessWidget {
                     icon: CupertinoIcons.sparkles,
                     onTap: () => Navigator.pushNamed(context, 'routines'),
                   ),
-                  const MenuItem(
+                  MenuItem(
                     title: 'Settings',
                     icon: CupertinoIcons.gear,
+                    onTap: () => showDialog(
+                      context: context,
+                      builder: (context) =>
+                          const ErrorInfoWidget(title: 'Error', subtitle: 'The page is not implemented yet'),
+                    ),
                   ),
-                  const MenuItem(
+                  MenuItem(
                     title: 'Logout',
                     icon: CupertinoIcons.back,
+                    onTap: () => showDialog(
+                      context: context,
+                      builder: (context) =>
+                          const ErrorInfoWidget(title: 'Error', subtitle: 'The page is not implemented yet'),
+                    ),
                   ),
                 ],
               ),

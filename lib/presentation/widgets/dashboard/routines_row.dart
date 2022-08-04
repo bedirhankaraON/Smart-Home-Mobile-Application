@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smartix/core/resources/theme/colors.dart';
+import 'package:smartix/data/datasources/local/icon_parser.dart';
 import 'package:smartix/data/datasources/local/mocked_storage/devices.dart';
 import 'package:smartix/presentation/blocs/routines/routines_bloc.dart';
 import 'package:smartix/presentation/pages/routines/routines_detail/routines_detail_modal.dart';
@@ -57,12 +58,7 @@ class _RoutinesRowState extends State<RoutinesRow> {
                         },
                         child: RoutinesRowItem(
                           name: state.routinesList![index].shortDescription ?? '',
-                          icon: IconData(
-                            device['deviceType']['icon'],
-                            fontFamily: device['deviceType']['fontFamily'],
-                            fontPackage:
-                                device['deviceType']['fontFamily'].contains('Cupertino') ? 'cupertino_icons' : null,
-                          ),
+                          icon: ParsedIcon.icon(device, size: 35, color: ThemeColors.secondary),
                         ),
                       );
                     }),
@@ -73,7 +69,11 @@ class _RoutinesRowState extends State<RoutinesRow> {
                     },
                     child: const RoutinesRowItem(
                       name: 'Add',
-                      icon: CupertinoIcons.plus,
+                      icon: Icon(
+                        CupertinoIcons.plus,
+                        size: 35,
+                        color: ThemeColors.secondary,
+                      ),
                       iconSize: 25,
                     ),
                   ),

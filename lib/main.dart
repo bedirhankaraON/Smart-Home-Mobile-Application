@@ -10,7 +10,7 @@ import 'package:smartix/presentation/blocs/weather/weather_bloc.dart';
 import 'package:smartix/presentation/pages/dashboard/dashboard_screen.dart';
 
 Future<void> main() async {
-  await dotenv.load(fileName: '.env');
+  await dotenv.load();
   await HiveHelper().init();
   runApp(App());
 }

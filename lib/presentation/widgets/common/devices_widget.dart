@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smartix/presentation/blocs/device/device_bloc.dart';
+import 'package:smartix/presentation/pages/dashboard/dashboard_screen.dart';
 import 'package:smartix/presentation/widgets/common/add_new_device_button.dart';
 import 'package:smartix/presentation/widgets/dashboard/dashboard_status_row.dart';
 
@@ -12,7 +13,7 @@ class DevicesWidget extends StatefulWidget {
 }
 
 class _DevicesWidgetState extends State<DevicesWidget> {
-  final bloc = DeviceBloc();
+  final bloc = dashboardDevicesBloc;
   @override
   void initState() {
     super.initState();
@@ -34,7 +35,7 @@ class _DevicesWidgetState extends State<DevicesWidget> {
                   final device = state.deviceList![index];
                   return DashboardStatusRow(
                     device: device,
-                    bloc:bloc,
+                    bloc: bloc,
                   );
                 },
               ),
@@ -49,6 +50,5 @@ class _DevicesWidgetState extends State<DevicesWidget> {
         );
       },
     );
-   
   }
 }

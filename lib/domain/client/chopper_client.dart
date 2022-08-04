@@ -9,7 +9,7 @@ abstract class ApiService extends ChopperService {
     final client = ChopperClient(
       baseUrl: baseUrl ?? dotenv.get('BASE_URL'),
       services: [_$ApiService()],
-      converter: JsonConverter(),
+      converter: const JsonConverter(),
     );
     return _$ApiService(client);
   }

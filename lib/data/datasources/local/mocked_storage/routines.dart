@@ -55,33 +55,3 @@ List<Routines> initialRoutinesForTest = [
     event: 'Open the Air Conditioner and set it to 19°C',
   ),
 ];
-
- // const RoutinesRowItem(
-                  //   name: 'Movie',
-                  //   icon: CupertinoIcons.film,
-                  //   iconSize: 25,
-                  // ),
-                  // const RoutinesRowItem(
-                  //   name: 'Relax',
-                  //   icon: Icons.coffee_outlined,
-                  //   iconSize: 25,
-                  // ),
-                  // const RoutinesRowItem(
-                  //   name: 'Feed',
-                  //   icon: CupertinoIcons.paw,
-                  //   iconSize: 25,
-                  // ),
-                  // const RoutinesRowItem(
-                  //   name: 'Hot',
-                  //   icon: CupertinoIcons.sun_dust,
-                  //   iconSize: 25,
-                  // ),
-                  // const RoutinesRowItem(
-                  //   name: 'Cold',
-                  //   icon: CupertinoIcons.snow,
-                  // ),
-                  // const RoutinesRowItem(
-                  //   name: 'Party',
-                  //   icon: CupertinoIcons.hifispeaker,
-                  //   iconSize: 25,
-                  // ),

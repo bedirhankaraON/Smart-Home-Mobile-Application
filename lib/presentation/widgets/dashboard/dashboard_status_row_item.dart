@@ -3,7 +3,7 @@ import 'package:smartix/core/resources/theme/colors.dart';
 
 class RoutinesRowItem extends StatelessWidget {
   const RoutinesRowItem({Key? key, required this.icon, this.iconSize, required this.name}) : super(key: key);
-  final IconData icon;
+  final Icon icon;
   final String name;
   final double? iconSize;
 
@@ -20,11 +20,7 @@ class RoutinesRowItem extends StatelessWidget {
               border: Border.all(color: ThemeColors.secondary),
               borderRadius: BorderRadius.circular(25),
             ),
-            child: Icon(
-              icon,
-              size: iconSize ?? 35,
-              color: ThemeColors.secondary,
-            ),
+            child: icon,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 4),

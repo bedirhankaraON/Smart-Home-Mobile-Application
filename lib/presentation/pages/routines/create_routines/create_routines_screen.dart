@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:smartix/core/resources/theme/colors.dart';
-import 'package:smartix/data/datasources/local/device_types.dart';
 import 'package:smartix/data/datasources/local/mocked_storage/devices.dart';
 import 'package:smartix/presentation/blocs/routines/routines_bloc.dart';
 import 'package:smartix/presentation/widgets/common/background_decoration.dart';
@@ -192,13 +191,17 @@ class _CreateRoutinesScreenState extends State<CreateRoutinesScreen> {
                             height: 50,
                             width: 200,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(color: ThemeColors.secondary)),
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: ThemeColors.secondary),
+                            ),
                             child: Center(
                               child: Text(
                                 DateFormat.Hm().format(state.hour ?? DateTime.now()),
                                 style: const TextStyle(
-                                    color: ThemeColors.secondary, fontSize: 20, fontWeight: FontWeight.bold),
+                                  color: ThemeColors.secondary,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),

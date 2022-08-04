@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartix/core/app_core.dart';
+import 'package:smartix/presentation/blocs/device/device_bloc.dart';
+import 'package:smartix/presentation/blocs/routines/routines_bloc.dart';
 import 'package:smartix/presentation/widgets/common/background_decoration.dart';
 import 'package:smartix/presentation/widgets/common/devices_widget.dart';
 import 'package:smartix/presentation/widgets/dashboard/routines_row.dart';
@@ -12,6 +14,9 @@ class DashboardScreen extends StatefulWidget {
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
 }
+
+final dashboardDevicesBloc = DeviceBloc();
+final dashboardRoutinesBloc = RoutinesBloc();
 
 class _DashboardScreenState extends State<DashboardScreen> {
   @override

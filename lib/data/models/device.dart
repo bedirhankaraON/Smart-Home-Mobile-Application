@@ -1,5 +1,5 @@
-import 'package:smartix/data/models/device_type.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:smartix/data/models/device_type.dart';
 
 part 'device.g.dart';
 
